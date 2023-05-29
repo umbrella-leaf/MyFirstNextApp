@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+// import '@/styles/globals.css';
 import type {AppContext, AppProps} from 'next/app';
 import App from "next/app";
 import {Layout, ILayoutProps} from "@/components/layout";
