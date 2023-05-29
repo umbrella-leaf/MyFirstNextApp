@@ -9,6 +9,9 @@ const nextConfig = {
       "@": path.resolve(__dirname)
     };
     return config;
+  },
+  images: {
+    domains: ["127.0.0.1"]
   }
 };
 
