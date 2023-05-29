@@ -20,6 +20,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "sass": "^1.62.1",
     "typescript-plugin-css-modules": "^5.0.1"
   }
