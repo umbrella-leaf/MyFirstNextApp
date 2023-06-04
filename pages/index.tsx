@@ -1,6 +1,8 @@
 import type {NextPage} from "next";
 import styles from "./index.module.scss";
 import cName from "classnames";
+import {useContext, useEffect, useReducer, useRef, useState} from "react";
+import {ThemeContext} from "@/stores/theme";
 
 interface IProps {
   title: string;
@@ -13,10 +15,21 @@ interface IProps {
 }
 
 const Home: NextPage<IProps> = ({title, description, list}) => {
+  const mainRef = useRef<HTMLDivElement>(null);
+  const {theme} = useContext(ThemeContext);
+
+  useEffect(() => {
+    mainRef.current?.classList.remove(styles.withAnimation);
+    window.requestAnimationFrame(() => {
+      mainRef.current?.classList.add(styles.withAnimation);
+    });
+  }, [theme]);
+
   return (
     <div className={styles.container}>
       <main
         className={cName([styles.main, styles.withAnimation])}
+        ref={mainRef}
       >
         <h1 className={styles.title}>{title}</h1>
 
