@@ -1,5 +1,6 @@
 import type {NextPage} from "next";
 import styles from "./index.module.scss";
+import cName from "classnames";
 
 interface IProps {
   title: string;
@@ -14,7 +15,9 @@ interface IProps {
 const Home: NextPage<IProps> = ({title, description, list}) => {
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <main
+        className={cName([styles.main, styles.withAnimation])}
+      >
         <h1 className={styles.title}>{title}</h1>
 
         <p className={styles.description}>{description}</p>

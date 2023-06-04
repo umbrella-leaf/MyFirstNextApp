@@ -110,4 +110,138 @@
   margin-left: 0.5rem;
 }
 
+.withAnimation {
+  .title {
+    animation: fadeInDown1 1s;
+  }
+  .description {
+    animation: fadeInDown2 1s;
+  }
+  .card:nth-of-type(1) {
+    animation: fadeInDown3 1s;
+  }
+  .card:nth-of-type(2) {
+    animation: fadeInDown4 1s;
+  }
+  .card:nth-of-type(3) {
+    animation: fadeInDown5 1s;
+  }
+  .card:nth-of-type(4) {
+    animation: fadeInDown6 1s;
+  }
+  .card:nth-of-type(5) {
+    animation: fadeInDown7 1s;
+  }
+  .card:nth-of-type(6) {
+    animation: fadeInDown8 1s;
+  }
+}
+
+@mixin initStatus {
+  transform: translate3d(0, 2.5rem, 0);
+  opacity: 0;
+}
+
+@mixin finalStatus {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+@keyframes fadeInDown1 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown2 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown3 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown4 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown5 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown6 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown7 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
+@keyframes fadeInDown8 {
+  0% {
+    @include initStatus;
+  }
+  11% {
+    @include initStatus;
+  }
+  100% {
+    @include finalStatus;
+  }
+}
+
 
